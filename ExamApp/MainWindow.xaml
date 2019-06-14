@@ -1,0 +1,22 @@
+﻿<Window x:Class="ExamApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:ExamApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Separator HorizontalAlignment="Left" Height="28" Margin="0,169,0,0" VerticalAlignment="Top" Width="792"/>
+        <TextBox Name="numberCountTextBox" materialDesign:HintAssist.Hint="Введите количество потоков" HorizontalAlignment="Left" Height="23" Margin="10,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198"/>
+        <Button Click="EnterButtonClick" Content="Запуск" HorizontalAlignment="Left" VerticalAlignment="Top" Width="129" Margin="79,96,0,0" RenderTransformOrigin="0.507,0.35"/>
+        <TextBox Name="urlAddressTextBox" materialDesign:HintAssist.Hint="Введите url адрес загрузки файла" HorizontalAlignment="Left" Height="50" Margin="10,271,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198"/>
+        <Button Name="downloadFileButton" Click="DownloadFileButtonClick" Content="Скачать" HorizontalAlignment="Left" VerticalAlignment="Top" Width="129" Margin="79,338,0,0" Height="34"/>
+        <TextBox Name="downloadPathTextBox" materialDesign:HintAssist.Hint="Введите путь для загрузки файла" HorizontalAlignment="Left" Height="50" Margin="231,271,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199"/>
+        <StatusBar Background="LightGray" Height="28" VerticalAlignment="Bottom">
+            <ProgressBar Name="progressBar" Visibility="Collapsed" Width="120" Height="18" IsIndeterminate="True"/>
+            <TextBlock Name="statusTextBlock" Text="Готово"/>
+        </StatusBar>
+    </Grid>
+</Window>
